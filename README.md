@@ -278,5 +278,10 @@ curl --digest -u admin:pnscotton987 "http://172.169.14.19/ISAPI/AccessControl/Ev
 
 ---
 
+File Structure:
+```
+
+```
+
 
 
