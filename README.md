@@ -201,3 +201,82 @@ But we can still build:
   <img src="https://img.icons8.com/fluency/96/000000/checked--v1.png" alt="Check Icon"/>
   <img src="https://img.icons8.com/fluency/96/000000/delete-sign.png" alt="Cross Icon"/>
 </p>
+
+---
+
+# 🧪 STEP 1 — Identify the Correct API by Auto-Detection
+
+Before you proceed with ERPNext or any integration, **let’s identify which Hikvision API is actually supported by your device!**
+
+Follow these steps **in order** & reply with the result/output from each command (just copy/paste what you see).
+
+---
+
+## 1️⃣ Try the Event API (Real-Time Alert Stream)
+
+```bash
+curl --digest -u admin:pnscotton987 "http://172.169.14.19/ISAPI/Event/notification/alertStream"
+```
+
+---
+
+## 2️⃣ Try the AccessControl Event API (JSON Event Fetch)
+
+```bash
+curl --digest -u admin:pnscotton987 "http://172.169.14.19/ISAPI/AccessControl/Event?format=json"
+```
+
+---
+
+## 3️⃣ Try the SDK Event API (If ISAPI not found)
+
+```bash
+curl --digest -u admin:pnscotton987 "http://172.169.14.19/SDK/AccessControl/getAllEvent"
+```
+
+---
+
+## 4️⃣ Try Time-Attendance Record APIs (JSON Records Fetch)
+
+```bash
+curl --digest -u admin:pnscotton987 "http://172.169.14.19/ISAPI/Attendance/Record?format=json"
+```
+
+```bash
+curl --digest -u admin:pnscotton987 "http://172.169.14.19/ISAPI/AccessControl/AcsEvent?format=json"
+```
+
+---
+
+## 🚀 What To Do Now
+
+**Reply with the result of these commands, one-by-one, exactly as your terminal outputs. Example:**
+
+```
+1️⃣
+curl --digest -u admin:pnscotton987 "http://172.169.14.19/ISAPI/Event/notification/alertStream"
+(Output goes here...)
+
+2️⃣
+curl --digest -u admin:pnscotton987 "http://172.169.14.19/ISAPI/AccessControl/Event?format=json"
+(Output goes here...)
+...
+```
+
+⚠️ **One of these WILL work** — and then we plug that into your final config!
+
+---
+
+<div align="center">
+
+<img src="https://img.icons8.com/fluency/96/000000/api-settings.png" alt="API Icon" width="48"/>
+<img src="https://img.icons8.com/color/96/000000/network.png" alt="Network Icon" width="48"/>
+<img src="https://img.icons8.com/ios-filled/100/laboratory.png" alt="Lab Icon" width="48"/>
+<img src="https://img.icons8.com/fluency/96/rocket.png" alt="Rocket" width="48"/>
+
+</div>
+
+---
+
+
+
